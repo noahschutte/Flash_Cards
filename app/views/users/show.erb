@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Account info page</h1>
+
+  <h4>
+    <%= @user.name %>
+  </h4>
+  <h4>
+    <%= @user.email %>
+  </h4>
+
+  <a href="/user/<%= @user.id %>/edit">Edit account info</a>
+  <br>
+  <!-- Should Log Out -->
+  <!-- <a href="">Log Out</a> -->
+  <br>
+
+  <form action="/user/<%= @user.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Logout">
+  </form>
+
+</div>
