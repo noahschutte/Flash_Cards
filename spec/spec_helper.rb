@@ -12,6 +12,8 @@ require 'shoulda-matchers'
 require 'rack/test'
 require 'capybara'
 require 'capybara/rspec'
+require 'BCrypt'
+require 'pry'
 
 RSpec.configure do |config|
   config.include Rack::Test::Methods
