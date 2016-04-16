@@ -1,3 +1,6 @@
-<%=@deck.name%>
+  <h4>You've completed a round <%= @deck.name %>!</h4>
 
-"You've completed a round <%= @deck.name %>. You answered <%= first_guess(@game.id) %>/<%= @deck.cards.length %> cards correctly on the frist try. You submitted <%= total_guesses(@game.id) %> total guesses before each card was answered correctly."
+<ul>
+  <li>You answered <%= first_guess(@game.id) %> out of <%= @deck.cards.length %> cards correctly on the first try. </li>
+  <li>You submitted <%= total_guesses(@game.id) %> total guesses before each card was answered correctly.</li>
+</ul>
