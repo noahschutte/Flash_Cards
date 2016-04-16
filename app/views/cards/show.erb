@@ -1,6 +1,17 @@
+<% if @game.guesses.empty? %>
+<% elsif @game.guesses.last.correct? != nil && @game.guesses.last.correct? == true  %>
+  <p>Correct!</p>
+<% elsif @game.guesses.last.correct? != nil && @game.guesses.last.correct? == false %>
+  <p>Sorry, the correct answer was <%= Card.find_by(id: @game.guesses.last.card_id).answer %></p>
+<% else %>
+<% end %>
+<br>
+
 Question: <%= @card.question %>
 
   <form action="/games/<%= @game.id %>/cards/<%= @card.id %>/guess" method="post">
     Response: <input type="text" name="response"><br>
     <input type="submit" value="Submit Response">
   </form>
+
+

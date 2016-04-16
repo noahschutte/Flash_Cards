@@ -17,7 +17,7 @@ post '/users' do
   @user = User.new(params[:user])
   if @user.save!
     session[:user_id] = @user.id
-    redirect "/users/#{@user.id}"
+    redirect "/"
   else
     erb :'/users/new'
   end

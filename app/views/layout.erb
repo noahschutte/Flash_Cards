@@ -19,7 +19,7 @@
      <ul class="bmenu">
       <li><a href="/">Homepage</a></li>
       <% if logged_in? %>
-        <li><a href="/users/<%= @user.id %>">User info</a></li>
+        <li><a href="/users/<%= @user.id %>"><%=@user.name%>'s Info</a></li>
         <form action="/logout" method="post" class="bmenu">
           <input type="hidden" name="_method" value="delete">
           <input type="submit" value="Logout"class="logout_button">

@@ -15,19 +15,57 @@ science_card_array = [
 ['How many kilograms does a litre of water weigh?', 1]
 ]
 
-???_card_array = [
-
+linguistics_card_array = [
+['What language has the most words?', 'English'],
+['What is the first letter on a typewriter?', 'Q'],
+['What is the main language in Albania?', 'Tosco'],
+['What are the Sun, the Independent and the Guardian?', 'newspapers'],
+['What is the longest word in Spanish?', 'superextraordinarissimo'],
+['Which is the most spoken language?', 'Chinese'],
+['In what language does "obrigado" mean "thank you"?', 'Portuguese'],
+['In which shop can you buy books in England?', 'bookshop']
 ]
 
-user = User.create(name: 'bob', email: 'bob@email.com', password: '1234')
+sports_and_entertainment_card_array = [
+['What is the name of the main airport in Madrid?', 'Barajas'],
+['What money do they use in Japan?', 'yen'],
+['How many minutes is a round in boxing?', 3],
+['How many months have 31 days?', 7],
+['What hour do the pubs normally close in England?', 11],
+['What is the fastest passenger plane in the world?', 'concorde'],
+['How many coloured balls are there in billiards?', 15],
+['How many players are there in a basketball team?', 5],
+['How many lanes does an olympic swimming pool have?', 8],
+['How many squares are there on a chess board?', 64],
+['Who starts first in chess?', 'white'],
+['How many events are there in the decathlon?', 10],
+['How many players are there in a volleyball team?', 6],
+['Where are the most expensive seats at a bullfight?', 'shaded']
+]
+
+useless_knowledge_card_array = [
+['What is the highest score in a gymnastics exercise?', 10],
+['Which fast food restaurant was established by Ray Kroc?', 'McDondalds'],
+['What do the opposite sides of a dice add up to?', 7],
+['What activity other than jumping are kangaroos good at?', 'boxing'],
+['How many eyes are there on a pack of 52 cards?', 42],
+['How many prongs are there on a fork?', 4],
+['Who named a perfume for her fashion shows on the 5th day of the month?', 'Chanel'],
+['How many dots are there on two dice?', 42],
+['What horoscope sign has a crab?', 'cancer'],
+['How many months is the compulsory military service in England?', 0]
+]
 
 deck = Deck.create(name: 'Science and Nature')
-deck = Deck.create(name: 'Pop Culture')
+deck = Deck.create(name: 'Linguistics')
+deck = Deck.create(name: 'Sports and Entertainment')
+deck = Deck.create(name: 'Useless Knowledge')
 
-science_card_array.each do |card|
-  Card.create(question: card[0], answer: card[1], deck: deck)
+arrays = [science_card_array, linguistics_card_array, sports_and_entertainment_card_array, useless_knowledge_card_array]
+
+arrays.each_with_index do |deck, index|
+  deck.each do |card|
+    Card.create(question: card[0], answer: card[1], deck_id: (index + 1))
+  end
 end
 
-???_card_array.each do |card|
-  Card.create(question: card[0], answer: card[1], deck: deck)
-end
