@@ -3,6 +3,7 @@ class CreateCards < ActiveRecord::Migration
     create_table :cards do |t|
       t.string :answer, null: false
       t.string :question, null: false
+      t.references :deck, null: false
 
       t.timestamps
     end
