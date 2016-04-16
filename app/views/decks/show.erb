@@ -1,0 +1,11 @@
+This is the
+<%= @deck.name %>
+ deck
+<br>
+<br>
+Would you like to start a round?
+<br>
+  <form action="/games" method="post">
+    <input type="hidden" name="deck_id" value="<%= @deck.id %>" >
+    <input type="submit" value="Start Game">
+  </form>

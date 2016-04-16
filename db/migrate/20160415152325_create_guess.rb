@@ -1,9 +1,9 @@
 class CreateGuess < ActiveRecord::Migration
   def change
     create_table :guesses do |t|
-      t.references :game
-      t.references :card
-      t.boolean :correct?
+      t.references :game, null: false
+      t.references :card, null: false
+      t.boolean :correct?, null: false
 
       t.timestamps
     end
