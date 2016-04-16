@@ -22,8 +22,8 @@ post '/games/:game_id/cards/:card_id/guess' do
   @deck = Deck.find_by(id: @card.deck_id)
   @game = Game.find_by(id: params[:game_id])
   response = params[:response]
-  evaluation = compare_answer(@card, response)
-  guess = Guess.create(game_id: @game.id, card_id: @card.id, correct?: evaluation)
+  @evaluation = compare_answer(@card, response)
+  guess = Guess.create(game_id: @game.id, card_id: @card.id, correct?: @evaluation)
   card = select_card(@deck.id, @game.id)
   if card == nil
     redirect "/games/#{@game.id}"
