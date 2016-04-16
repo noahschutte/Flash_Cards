@@ -1,4 +1,7 @@
-<H1>Decks available to play:</H1>
+<link rel="stylesheet" href="../css/deck_index.css">
+
+<div class='deck_links'><H1>Decks available to play:</H1>
 <% @decks.each do |deck| %>
   <a href="/decks/<%= deck.id %>"><h3><%= deck.name %></h3></a>
 <%end%>
+</div>
