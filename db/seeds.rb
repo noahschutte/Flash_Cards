@@ -43,7 +43,7 @@ sports_and_entertainment_card_array = [
 ['Where are the most expensive seats at a bullfight?', 'shaded']
 ]
 
-useless_knowlege_card_array = [
+useless_knowledge_card_array = [
 ['What is the highest score in a gymnastics exercise?', 10],
 ['Which fast food restaurant was established by Ray Kroc?', 'McDondalds'],
 ['What do the opposite sides of a dice add up to?', 7],
@@ -61,11 +61,11 @@ deck = Deck.create(name: 'Linguistics')
 deck = Deck.create(name: 'Sports and Entertainment')
 deck = Deck.create(name: 'Useless Knowledge')
 
-arrays = [science_card_array, linguistics_card_array, sports_and_entertainment_card_array, useless_knowlege_card_array]
+arrays = [science_card_array, linguistics_card_array, sports_and_entertainment_card_array, useless_knowledge_card_array]
 
 arrays.each_with_index do |deck, index|
   deck.each do |card|
-    Card.create(question: card[0], answer: card[1], deck: index)
+    Card.create(question: card[0], answer: card[1], deck_id: (index + 1))
   end
 end
 
