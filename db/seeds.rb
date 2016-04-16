@@ -1,4 +1,4 @@
-card_array = [
+science_card_array = [
 ['The female praying mantis eats the male after she makes love.', 'True'],
 ['How many colours are there in a rainbow?', 7],
 ['How many legs does a spider have?', 8],
@@ -15,10 +15,19 @@ card_array = [
 ['How many kilograms does a litre of water weigh?', 1]
 ]
 
+???_card_array = [
+
+]
+
 user = User.create(name: 'bob', email: 'bob@email.com', password: '1234')
 
 deck = Deck.create(name: 'Science and Nature')
+deck = Deck.create(name: 'Pop Culture')
 
-card_array.each do |card|
+science_card_array.each do |card|
+  Card.create(question: card[0], answer: card[1], deck: deck)
+end
+
+???_card_array.each do |card|
   Card.create(question: card[0], answer: card[1], deck: deck)
 end

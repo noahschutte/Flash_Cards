@@ -1,0 +1,3 @@
+<%=@deck.name%>
+
+"You've completed a round <%= @deck.name %>. You answered <%= first_guess(@game.id) %>/<%= @deck.cards.length %> cards correctly on the frist try. You submitted <%= total_guesses(@game.id) %> total guesses before each card was answered correctly."

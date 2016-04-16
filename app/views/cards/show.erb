@@ -1,1 +1,6 @@
-We are there
+Question: <%= @card.question %>
+
+  <form action="/games/<%= @game.id %>/cards/<%= @card.id %>/guess" method="post">
+    Response: <input type="text" name="response"><br>
+    <input type="submit" value="Submit Response">
+  </form>

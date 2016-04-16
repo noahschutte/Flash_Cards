@@ -2,3 +2,15 @@ Name: <%= @user.name %>
 <br>
 <br>
 Email: <%= @user.email %>
+<br>
+<br>
+<% deck_array(@user.id).each do |deck| %>
+  <h4><%= deck.name %><h4>
+  <br>
+  Date / Cards in Deck / First Guess Correct / Total Guesses
+    <% games_array(deck, @user.id).each do |game| %>
+    <p> <%= game.created_at %> <%= deck.cards.count %> <%= first_guess(game.id) %> <%= total_guesses(game.id) %> <p>
+    <% end %>
+<% end %>
+
+
