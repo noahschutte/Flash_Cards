@@ -3,8 +3,9 @@
 <head>
 
   <link rel="stylesheet" href="/css/normalize.css">
-
   <link rel="stylesheet" href="/css/application.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
@@ -12,30 +13,26 @@
   <title>Flashcard App</title>
 </head>
 <body>
-  <div style="border: 1px solid black ">
-    <h1>Welcome to the flashcard app!</h1>
-    <br>
-    <a href="/">Homepage</a>
-    <br>
-    <% if logged_in? %>
+  <nav , class='layout_background'>
+    <div style="border: 1px solid black ">
+      <h1 class='header'>Cerebral Strain</h1>
+     <ul class="bmenu">
+      <li><a href="/">Homepage</a></li>
+      <% if logged_in? %>
+        <li><a href="/users/<%= @user.id %>">User info</a></li>
+        <form action="/logout" method="post" class="bmenu">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="Logout"class="logout_button">
+        </form>
+      <% else %>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/users/new">Create new account</a></li>
+      <% end %>
+    </ul>
       <br>
-      <a href="/users/<%= @user.id %>">User info</a>
       <br>
-      <br>
-      <form action="/logout" method="post">
-        <input type="hidden" name="_method" value="delete">
-        <input type="submit" value="Logout">
-      </form>
-    <% else %>
-      <br>
-      <a href="/login">Login</a>
-      <br>
-      <br>
-      <a href="/users/new">Create new account</a>
-    <% end %>
-    <br>
-    <br>
-  </div>
+    </div>
+  </nav>
   <%= yield %>
 </body>
 </html>
