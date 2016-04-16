@@ -5,6 +5,7 @@ end
 get '/users/:id' do
   required_logged_in
   @user = User.find_by(id: params[:id])
+  @decks = @user.decks.uniq
   if @user && session[:user_id] == @user.id
     erb :'/users/show'
   else
