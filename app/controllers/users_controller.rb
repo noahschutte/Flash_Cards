@@ -22,7 +22,4 @@ post '/users' do
   end
 end
 
-delete '/users/:id' do
-  session.clear
-  redirect '/'
-end
+
