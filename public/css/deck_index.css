@@ -1,0 +1,18 @@
+.deck_links{
+  position:relative;
+  left:27.5%;
+  right:27.5%;
+  width:35%;
+  background-color: Orange;
+  list-style-type: none;
+  border:1px solid black;
+  text-align: center;
+}
+
+.deck_links a:link{
+  text-decoration: none;
+}
+
+.bottom_half{
+  height:100%;
+}
