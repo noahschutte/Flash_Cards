@@ -1,10 +1,14 @@
-# Web Flash Cards
+# Flash Cards Web Application
 
-## Summary
-We're going to create a web-based flash card application.  Our application will present users with decks of flash cards.  Users will select a deck and play a round of flash cards.
+## Contributors
+#Brian Donahue
+(https://github.com/bpd4tw)
 
-This will be our most complicated web application yet.  In addition to getting over the technical hurdles, this challenge will also have dimensions of product management.  We'll begin to get a feel for how to manage complexity as projects grow and become more nuanced on both the front- and backends. We'll need to divide labor and collaborate as a team.  As in the real-world, we'll also be faced with incomplete and ambiguous specifications.
+#Alex Forger
+(https://github.com/Darrow87)
 
+#Noah Schutte
+(https://github.com/noahschutte)
 
 ## Releases
 ### Release 0: Build the MVP
