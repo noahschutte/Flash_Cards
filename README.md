@@ -1,6 +1,6 @@
-# Flash Cards Web Application
+# Flash Card Web Application
 
-## Contributors
+### Contributors
 ####Brian Donahue
 https://github.com/bpd4tw
 
@@ -10,7 +10,7 @@ https://github.com/Darrow87
 ####Noah Schutte
 https://github.com/noahschutte
 
-### How to Run the App
+## How to Run the App
 
 - Clone the repository
 - Run 'Bundle'
