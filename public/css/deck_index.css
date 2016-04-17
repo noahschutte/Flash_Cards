@@ -1,18 +1,38 @@
 .deck_links{
   position:relative;
-  left:27.5%;
+  left:28%;
   right:27.5%;
   width:35%;
-  background-color: Orange;
+  height: 16em;
   list-style-type: none;
-  border:1px solid black;
+  border:1px solid transparent;
   text-align: center;
+  border-radius: 20px;
+  /*margin-top: 2px;*/
+  font-family: 'Bangers', serif;
 }
+
 
 .deck_links a:link{
   text-decoration: none;
+  color: #990000;
+}
+
+.deck_links a:hover{
+  color: #990000;
+  font-size: 1.05em;
+}
+
+.deck_links a:visited {
+  text-decoration: none;
+  color: color: #990000;
 }
 
 .bottom_half{
   height:100%;
+  /*background-color: #B0B0B0;*/
+  background: url(/images/grey_background.jpg) no-repeat;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
+
