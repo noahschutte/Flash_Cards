@@ -1,14 +1,14 @@
 # Flash Cards Web Application
 
 ## Contributors
-#Brian Donahue
-(https://github.com/bpd4tw)
+###Brian Donahue
+https://github.com/bpd4tw
 
-#Alex Forger
-(https://github.com/Darrow87)
+###Alex Forger
+https://github.com/Darrow87
 
-#Noah Schutte
-(https://github.com/noahschutte)
+###Noah Schutte
+https://github.com/noahschutte
 
 ## Releases
 ### Release 0: Build the MVP
