@@ -1,3 +1,8 @@
+<link rel="stylesheet" href="../../public/css/card_show.css">
+<link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+
+<section style="height:250px; background: url(/images/grey_background.jpg) no-repeat; background-size: 100% 100%; background-repeat: no-repeat;" class='container'>
+  <div style="position:relative; width:30%; text-align: center; left:30%; border:1px solid transparent; font-family: 'Bangers', serif; font-size:1.6em; color: #000000;">
 <% if @game.guesses.empty? %>
 <% elsif @game.guesses.last.correct? != nil && @game.guesses.last.correct? == true  %>
   <p>Correct!</p>
@@ -5,13 +10,13 @@
   <p>Sorry, the correct answer was <%= Card.find_by(id: @game.guesses.last.card_id).answer %></p>
 <% else %>
 <% end %>
-<br>
 
-Question: <%= @card.question %>
-
-  <form action="/games/<%= @game.id %>/cards/<%= @card.id %>/guess" method="post">
+</div>
+  <h3 style="position:relative; width:30%; text-align: center; left:30%; border:1px solid transparent; font-family: 'Bangers', serif; font-size:1.6em; color: #000000;margin-top:0px">Question: <%= @card.question %></h3>
+  <form style="position:relative; width:30%; text-align: center; left:30%; border:1px solid transparent; font-family: 'Bangers', serif; font-size:1.6em; color: #000000;" action="/games/<%= @game.id %>/cards/<%= @card.id %>/guess" method="post">
     Response: <input type="text" name="response"><br>
     <input type="submit" value="Submit Response">
   </form>
+</section>
 
 
